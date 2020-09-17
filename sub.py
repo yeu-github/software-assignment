@@ -51,15 +51,7 @@ def callback(data):
 
 				while len(d1) < 4:
 					d1 = "O" + d1
-
-
-
-				
-				#rospy.loginfo(a)
-				#rospy.loginfo(b)
-				#rospy.loginfo(c)
-				#rospy.loginfo(d)
-				#rospy.loginfo(data.data)
+					
 				rospy.loginfo("Drive code = A  {} {} {} {} B " .format(a1, b1, c1, d1))
 				
 				
@@ -134,15 +126,6 @@ def callbackArm(data):
 					f1 = "O" + f1
 
 
-
-				
-				#rospy.loginfo(a)
-				#rospy.loginfo(b)
-				#rospy.loginfo(c)
-				#rospy.loginfo(d)
-				#rospy.loginfo(e)
-				#rospy.loginfo(f)
-				#rospy.loginfo(data.data)
 				rospy.loginfo("Robotic Arm code = A  {} {} {} {} {} {} B " .format(a1, b1, c1, d1,e1, f1))
 				#rospy.loginfo("Robotic Arm code =  " + data.data)
 
