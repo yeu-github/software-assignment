@@ -35,24 +35,28 @@ def callback(data):
 				elif d > 1255 and d < 1280:
 					d = 1255
 				
-				a1 = str(a)
-				b1 = str(b)
-				c1 = str(c)
-				d1 = str(d)
+				
+				if a < 256:
+					a = -1 * a
+				else:
+					a = a - 1000
 
-				while len(a1) < 4:
-					a1 = "O" + a1
+				if b < 256:
+					b = -1 * b
+				else:
+					b = b - 1000
 
-				while len(b1) < 4:
-					b1 = "O" + b1
+				if c < 256:
+					c = -1 * c
+				else:
+					c = c - 1000
 
-				while len(c1) < 4:
-					c1 = "O" + c1
-
-				while len(d1) < 4:
-					d1 = "O" + d1
+				if d < 256:
+					d = -1 * d
+				else:
+					d = d - 1000
 					
-				rospy.loginfo("Drive code = A  {} {} {} {} B " .format(a1, b1, c1, d1))
+				rospy.loginfo("Drive code = A  {} {} {} {} B " .format(a, b, c, d))
 				
 				
 
@@ -100,33 +104,39 @@ def callbackArm(data):
 					f = 1255
 				
 
-				a1 = str(a)
-				b1 = str(b)
-				c1 = str(c)
-				d1 = str(d)
-				e1 = str(e)
-				f1 = str(f)
+				
+				if a < 256:
+					a = -1 * a
+				else:
+					a = a - 1000
 
-				while len(a1) < 4:
-					a1 = "O" + a1
+				if b < 256:
+					b = -1 * b
+				else:
+					b = b - 1000
 
-				while len(b1) < 4:
-					b1 = "O" + b1
+				if c < 256:
+					c = -1 * c
+				else:
+					c = c - 1000
 
-				while len(c1) < 4:
-					c1 = "O" + c1
+				if d < 256:
+					d = -1 * d
+				else:
+					d = d - 1000
 
-				while len(d1) < 4:
-					d1 = "O" + d1
+				if e < 256:
+					e = -1 * e
+				else:
+					e = e - 1000
 
-				while len(e1) < 4:
-					e1 = "O" + e1
+				if f < 256:
+					f = -1 * f
+				else:
+					f = f - 1000
 
-				while len(f1) < 4:
-					f1 = "O" + f1
 
-
-				rospy.loginfo("Robotic Arm code = A  {} {} {} {} {} {} B " .format(a1, b1, c1, d1,e1, f1))
+				rospy.loginfo("Robotic Arm code = A  {} {} {} {} {} {} B " .format(a, b, c, d, e, f))
 				#rospy.loginfo("Robotic Arm code =  " + data.data)
 
 
