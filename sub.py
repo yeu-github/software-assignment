@@ -8,13 +8,9 @@ from std_msgs.msg import String
 def callback(data):
 
 	if len(data.data) == 18:
-		if data.data[0] == "A":
-			if data.data[17] == "B":
-				y = ["a", "b", "c", "d"]
-				y[0] = data.data[1:5]
-				y[1] = data.data[5:9]
-				y[2] = data.data[9:13]
-				y[3] = data.data[13:17]
+		if data.data[0] == "A" and data.data[17] == "B":
+				y = [data.data[1:5], data.data[5:9], data.data[9:13], data.data[13:17]]
+				
 
 				for x in xrange(0, 4):
 					z = int(y[x])
@@ -38,15 +34,8 @@ def callback(data):
 def callbackArm(data):
 
 	if len(data.data) == 26:
-		if data.data[0] == "A":
-			if data.data[25] == "B":
-				y = ["a", "b", "c", "d","c", "d"]
-				y[0] = data.data[1:5]
-				y[1] = data.data[5:9]
-				y[2] = data.data[9:13]
-				y[3] = data.data[13:17]
-				y[4] = data.data[17:21]
-				y[5] = data.data[21:25]
+		if data.data[0] == "A" and data.data[25] == "B":
+				y = [data.data[1:5], data.data[5:9], data.data[9:13], data.data[13:17],data.data[17:21], data.data[21:25]]
 
 				for x in xrange(0, 6):
 					z = int(y[x])
