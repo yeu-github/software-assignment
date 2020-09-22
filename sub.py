@@ -13,7 +13,7 @@ def callback(data):
 			elif len(data.data) == 26:
 				y = [data.data[1:5], data.data[5:9], data.data[9:13], data.data[13:17],data.data[17:21], data.data[21:25]]
 
-			for x in xrange(0, int(len(y))-2 / 4):
+			for x in xrange(0, int(len(y))):
 				z = int(y[x])
 				if z < 280:
 					z = -1 * z
