@@ -13,9 +13,9 @@ def callback(data):
 			elif len(data.data) == 26:
 				y = [data.data[1:5], data.data[5:9], data.data[9:13], data.data[13:17],data.data[17:21], data.data[21:25]]
 
-			for x in xrange(0, int(len(y))):
+			for x in xrange(0, len(y)):
 				z = int(y[x])
-				if z < 280:
+				if z < 281:
 					z = -1 * z
 					if z < -255:
 						z = -255
